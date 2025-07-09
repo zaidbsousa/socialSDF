@@ -153,4 +153,59 @@
             startAutoSlide();
         })();
 
+        // Language switch for logo only
+        const langSwitch = document.getElementById('lang-switch');
+        const logoAr = document.querySelector('.logo-ar');
+        const logoEn = document.querySelector('.logo-en');
+        const titleAr = document.querySelector('.title-ar');
+        const titleEn = document.querySelector('.title-en');
+        const subtitleAr = document.querySelector('.subtitle-ar');
+        const subtitleEn = document.querySelector('.subtitle-en');
+
+        if (langSwitch && logoAr && logoEn && titleAr && titleEn && subtitleAr && subtitleEn) {
+          langSwitch.addEventListener('change', function() {
+            if (this.value === 'en') {
+              logoAr.style.display = 'none';
+              logoEn.style.display = 'block';
+              titleAr.style.display = 'none';
+              titleEn.style.display = 'block';
+              subtitleAr.style.display = 'none';
+              subtitleEn.style.display = 'block';
+              document.querySelectorAll('.link-text-ar').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.link-text-en').forEach(e => e.style.display = 'inline');
+              document.querySelectorAll('.swiper-title-ar').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.swiper-title-en').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.swiper-slide-title-ar').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.swiper-slide-title-en').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.swiper-slide-date-ar').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.swiper-slide-date-en').forEach(e => e.style.display = 'block');
+              document.body.classList.add('en-active');
+              document.querySelectorAll('.social-title-ar').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.social-title-en').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.sdf-stat-label-ar').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.sdf-stat-label-en').forEach(e => e.style.display = 'block');
+            } else {
+              logoAr.style.display = 'block';
+              logoEn.style.display = 'none';
+              titleAr.style.display = 'block';
+              titleEn.style.display = 'none';
+              subtitleAr.style.display = 'block';
+              subtitleEn.style.display = 'none';
+              document.querySelectorAll('.link-text-ar').forEach(e => e.style.display = 'inline');
+              document.querySelectorAll('.link-text-en').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.swiper-title-ar').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.swiper-title-en').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.swiper-slide-title-ar').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.swiper-slide-title-en').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.swiper-slide-date-ar').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.swiper-slide-date-en').forEach(e => e.style.display = 'none');
+              document.body.classList.remove('en-active');
+              document.querySelectorAll('.social-title-ar').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.social-title-en').forEach(e => e.style.display = 'none');
+              document.querySelectorAll('.sdf-stat-label-ar').forEach(e => e.style.display = 'block');
+              document.querySelectorAll('.sdf-stat-label-en').forEach(e => e.style.display = 'none');
+            }
+          });
+        }
+
 
