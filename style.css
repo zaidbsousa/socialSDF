@@ -141,6 +141,7 @@ body::before {
     background: #187eccdf url('./images/mainboxbg.svg') center/cover no-repeat;
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.387), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+    margin-top: 3.5rem; /* Increase this value for more space above */
 }
 
 .logo-section {
@@ -650,6 +651,7 @@ body::before {
     margin-right: auto;
     text-align: center;
     backdrop-filter: blur(3px);
+    margin-bottom: 3.5rem; /* Increase this value for more space below */
 }
 
 .sdf-stat {
